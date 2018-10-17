@@ -17,6 +17,7 @@ public class MapDemo {
         Set<String> keySet = map.keySet();
         Iterator<String > it = keySet.iterator();
         while (it.hasNext()){
+
             System.out.println(map.get(it.next()));
 
         }
