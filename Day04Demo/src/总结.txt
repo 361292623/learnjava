@@ -1,0 +1,66 @@
+01.能够说出Map集合特点
+   元素是键值对
+    Map集合和泛型都只能支持引用数据类型。
+ *       Map集合的键是无序不重复的,但是Map集合的值是不做要求的。
+ *       Map集合重复键的元素会覆盖前面的元素。
+ *       Map集合的键值对都可以为null.
+
+* Map集合的分类：
+*          Map<K,V>(接口)
+*        /
+*      HashMap<K,V>(实现类)
+*       /
+*    LinkedHashMap<K,V> (实现类) 有序不重复
+
+02.使用Map集合添加方法保存数据
+	Map<Integer , String> maps = new HashMap<>();
+	maps.put(11,"张三");
+
+03.使用”键找值”的方式遍历Map集合
+        // 创建一个Map集合
+        Map<Integer,String> maps = new HashMap<>();
+        maps.put(1,"王林");
+        maps.put(2,"唐鹏");
+        maps.put(3,"梁悦");
+        System.out.println(maps);
+
+	// （1）遍历Map集合
+        //  先通过提取集合所有的key,然后再通过key获取对应的value。
+        // keys = [1,2,3]
+        Set<Integer> keys = maps.keySet();
+        // 然后再通过key获取对应的value。
+        for(Integer key : keys){
+            // 通过key获取对应的value
+            String value = maps.get(key);
+            System.out.println(key +"-->"+value);
+        }
+03. 使用”键值对”的方式遍历Map集合
+	   // maps = {沙僧=3, 孙悟空=1, 猪八戒=2, 吴刚=2, 唐僧=0}
+            // entries = [(沙僧=3) , (孙悟空=1) , (猪八戒=2) ,(吴刚=2) , (唐僧=0)]
+            /*
+            *  foreach格式：
+            *    for(被遍历集合或者数组中元素的类型 变量 : 被遍历集合或者数组 ){
+            *
+            *    }
+            *
+            *    foreach默认是无法遍历Map集合，因为Map集合中的元素(key=value)根本没有类型。
+            *
+            *    Java提供了一个API把Map集合转换成Set集合。
+            *       Set<Map.Entry<String, Integer>> entry = maps.entrySet();
+            *
+            *       entries = [(沙僧=3) , (孙悟空=1) , (猪八戒=2) ,(吴刚=2) , (唐僧=0)]
+            *       //           entry
+            *       此时：(沙僧=3)就存在类型，Java设计的类型是：Map.Entry<String, Integer>
+            */
+            Set<Map.Entry<String, Integer>> entries = maps.entrySet();
+            for(Map.Entry<String, Integer> entry : entries){
+                String key = entry.getKey();
+                Integer value = entry.getValue();
+                System.out.println(key+"=>"+value);
+            }
+04.能够使用HashMap存储自定义键值对的数据
+    Map<String,Apple> infos = new HashMap<>();
+    Map<Apple,Apple> infos = new HashMap<>();
+
+05.能够使用HashMap编写斗地主洗牌发牌案例
+   参见代码！

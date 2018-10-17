@@ -1,0 +1,65 @@
+01.能够说出集合与数组的区别
+* 集合：
+*     就是一个容器，可以存储多个数据。类似于数组。
+*
+*     数组的特点:
+*        -- 数组的类型是确定的，数组的长度是固定的。
+*        -- 数组是比较单一的，数组就是一种形式。
+*
+*     集合的特点：
+*        -- 集合的类型是可以不固定的，集合的长度也是不固定的
+*           集合中的元素多，集合就大，集合可以无限度的往里面添加元素。
+*
+*     开发中如果遇到了元素类型是确定的，并且元素个数也是确定的应该选择使用数组。
+*     开发中经常出现元素的个数是不确定的，而且经常需要增删元素，这个时候应该选择集合。
+*     开发中集合用的最多！
+
+02.说出Collection集合的常用功能
+   public boolean add(E e) 添加元素
+   public void clear()     清空集合中的元素
+   boolean remove(E e)     删除指定的元素，删除成功返回true，否则false,只删除第一次出现的元素。
+   boolean contains(E e)   判断集合中是否包含指定的元素，包含返回true，否则false
+   public boolean isEmpty()  判断集合是否为空(元素个数是否等于零)，为空返回true，否则false
+   public int size()       获得集合元素的个数
+   public Object[] toArray()  将集合转换为数组
+
+03.能够使用迭代器对集合进行取元素
+    Iterator<Student> it = stus.iterator();
+   while(it.hasNext()){
+       Student stu =  it.next();
+       System.out.println(stu);
+   }
+
+04.能够说出集合的使用细节
+       List系列集合的特点：添加的元素是有序可重复，有索引的。（很像数组）
+   *          -- ArrayList<E>(实现类)： 有序可重复，有索引的
+   *          -- LinkedList<E>实现类)： 有序可重复，有索引的
+   *
+   *       Set系列集合的特点：添加的元素是无序，不重复，无索引的。
+   *          -- HashSet<E>(实现类) ： 无序，不重复。
+   *          -- LinkedHashSet<E>(实现类)： 有序，不重复。
+
+   迭代器不能取的超过元素的个数。
+   泛型和集合只支持引用数据类型
+
+05. 能够使用集合存储自定义类型
+        Collection<Student> stus = new ArrayList<>();
+
+06. 能够使用foreach循环遍历集合
+* foreach的格式：
+*    for(被遍历集合或者数组中元素的类型  变量 : 被遍历集合或者数组){
+*         // 输出变量
+*    }
+
+07. 能够使用泛型定义集合对象
+   Collection<String> lists = new ArrayList<>();
+   Collection<Integer> lists = new ArrayList<>();
+
+08. 能够理解泛型上下限
+    *   ? extends Car : 泛型的上限。
+    *       ? 必须是Car类型或者是Car的子类类型。
+    *   ? super Car : 反型的下限。
+    *       ? 必须是Car类型或者是Car的父类类型。
+
+09. 能够阐述泛型通配符的作用
+   ? 代表一切类型，使用泛型的才可以使用。
