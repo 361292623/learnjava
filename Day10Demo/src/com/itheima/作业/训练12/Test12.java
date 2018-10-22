@@ -44,7 +44,11 @@ public class Test12 {
             System.out.println(s);
         }
         br1.close();
-
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
 }
 
 }
