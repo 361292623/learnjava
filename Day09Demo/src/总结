@@ -1,0 +1,113 @@
+01.能够说出IO流的分类和功能
+             字节流                                字符流
+        字节输入流           字节输出流           字符输入流     字符输出流
+抽象的   InputStream        OutputStream       Reader        Writer
+实现类   FileInputStream    FileOutputStream   FileReader    FileWriter
+
+读取文件，复制文件。
+读取多媒体文件建议用字节流。
+读取文本文件建议用字符流。
+
+02.能够使用字节输出流写出数据到文件。
+  FileOutputStream fos = new FileOutputStream(new File(""));
+  fos.write(int ch);写一个字符编号出去 ;int ch1 = '徐';
+  for.write(byte[] buffer); 写一个字节数组出去
+  for.write(byte[] buffer, int pos ,int len); 写一个字节数组的一部分出去
+
+
+03.能够使用字节输入流读取数据到程序（不合适）
+  FileInputStream fis = new FileInputStream(new File(""));
+  int temp = fis.read(); // 读取一个字节
+  // 读取到一个字节数组中去,返回读取类多少个字节，返回-1说明读完了。
+  int len = fis.read(byte[] buffer);
+
+04. 能够理解读取数据read(byte[])方法的原理
+   字节流 必须用字节数组代表桶去装水！返回每次装了多少滴字节数！
+   返回-1说明没有数据可读！
+
+05. 能够使用字节流完成文件的复制
+    参见代码！
+
+06.能够完成单级文件夹复制（复制多级文件夹，删除文件夹） 作业！
+    参见代码！
+    File file = new File("文件夹");
+    File[] files = file.listFiles();
+    for(File f : files){
+        InputStream is = new FileInputStrem(f);
+
+        OutputStream os = new FileoutStream(new File("目标文件"));
+
+        参见代码！
+    }
+
+07. 能够使用FileWirter写数据到文件
+        // 1.写一个一个的字符出去
+        fw.write(97);
+        fw.write('徐');
+        fw.write('磊');
+        fw.write("\r\n");
+
+        // 2.写一个字符串出去：写一个桶出去
+        fw.write("itheima欢迎您！");
+        fw.write("\r\n");
+
+
+        // 3.写一个字符数组出去
+        char[] buffer = "itheima欢迎您！".toCharArray();
+        fw.write(buffer);
+        fw.write("\r\n");
+
+
+        // 4.写一个字符串的一部分出去: abc我爱你
+        fw.write("abc我爱你中国",0,6);
+        fw.write("\r\n");
+
+
+        // 5.写一个字符数组的一部分出去：倒出一个桶的一部分出去
+        char[] buffer1 = "abc我爱您中国！".toCharArray();
+        fw.write(buffer1,0,6);
+        fw.write("\r\n");
+
+08.能够说出FileWriter中关闭和刷新方法的区别
+   关闭包含了刷新！
+
+09.能够使用FileWriter写数据的5个方法
+            // 一个字符一个字符的写出去
+            fw.write(97);
+            fw.write("\r\n");
+
+            // 支持写一个字符串
+            fw.write("我爱你中国");
+            fw.write("\r\n");
+
+            // 得到一个字符数组：就是一个桶
+            char[] buffer = "itheima程序员".toCharArray();
+            fw.write(buffer);
+            fw.write("\r\n"); // 换行！
+
+            // 只写出abc
+            fw.write("abcdef",0,3);
+            fw.write("\r\n");
+
+            char[] buffer1 = "itheima程序员".toCharArray();
+            fw.write(buffer1,0,3); // 只写出 ith
+            fw.write("\r\n");
+
+10. 能够使用FileWriter写数据实现换行和追加写
+      // 参数true:是追加数据的意思，是不会覆盖之前的数据。
+       FileWriter fw = new FileWriter(destFile,true);
+       fw.write("\r\n"); // 换行！
+
+11.能够使用FileReader读数据
+   参见代码。
+
+12.能够使用FileReader读数据一次一个字符数组
+
+            FileReader fr = new FileReader("src/dlei01.txt");
+
+            char[] buffer = new char[8];
+            int len =  0 ;
+            while((len = fr.read(buffer))>0){
+                String rs = new String(buffer,0,len);
+                System.out.print(rs);
+            }

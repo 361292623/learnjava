@@ -1,0 +1,41 @@
+01.能够说出File对象的创建方式（File类代表文件，然后操作文件）
+   File f = new File("绝对路径/相对路径")
+   File f = new File("文件/文件夹")
+
+  （1）File(String pathname) （重要的）
+  （2）File(File parent, String child)
+  （3）File(String parent, String child)
+
+02. 能够说出File类获取名称的方法名称
+    getName()
+
+03. 能够说出File类获取绝对路径的方法名称
+    getAbsolutePath()
+
+04. 能够说出File类获取文件大小的方法名称
+    long length()
+
+05. 能够说出File类判断是否是文件的方法名称
+     isFile()
+
+06. 能够说出File类判断是否是文件夹的方法名称
+    isDirectory()
+
+07. 能够辨别相对路径和绝对路径
+
+08. 能够遍历文件夹
+    File f = new File("D:\\itcast\\技术文档");
+    File[] files = f.listFiles();
+    if(files !=null && files.length > 0){
+         for(File f1 : files){
+                System.out.println(f1.getAbsolutePath());
+         }
+    }
+
+09. 能够解释递归的含义
+    方法自己调用自己。
+
+10. 能够使用递归的方式计算5的阶乘
+
+11  能够说出使用递归会内存溢出隐患的原因
+    递归可能进入死循环。

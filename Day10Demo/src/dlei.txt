@@ -1,0 +1,6 @@
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+* 研究缓冲流的性能问题：
+* 研究缓冲流是否比低级流的读写性能快。

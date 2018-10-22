@@ -1,4 +1,4 @@
-package com.itheima.作业.训练3;
+package 训练3;
 
 import java.util.Iterator;
 import java.util.LinkedList;
