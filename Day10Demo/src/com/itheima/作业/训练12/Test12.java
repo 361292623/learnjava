@@ -16,9 +16,6 @@ public class Test12 {
             bw = new BufferedWriter(new OutputStreamWriter(fos,"GBK"));
 
             String line = null;
-          System.out.println();
-          System.out.println();
-
             while ((line = br.readLine())!=null){
                 System.out.println(line);
                 bw.write(line);
@@ -47,11 +44,7 @@ public class Test12 {
             System.out.println(s);
         }
         br1.close();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
+
 }
 
 }
