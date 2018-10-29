@@ -1,0 +1,56 @@
+01.能够使用String类的构造方法创建字符串对象
+    构造器：
+       查看构造方法
+       String() 创建一个空的字符串对象
+       String(String original) 根据字符串来创建一个字符串对象
+       北京市昌平区建材城西路金燕龙办公楼一层  电话：400-618-9090
+       String(char[] value) 通过字符数组来创建字符串对象
+       String(byte[] bytes) 通过字节数组来构造新的字符串对象
+       String(byte[] bytes, int offset, int length) 通过字节数组一部分来
+
+02.能够明确String类的构造方法创建对象,
+    和直接赋值创建字符串对象的区别
+
+    直接赋值是常用的
+    构造器创建对象，把对象放到堆中
+    构造器创建对象功能比较多
+
+03.能够使用文档查询String类的判断方法
+*  public boolean equals (Object anObject) ：
+*       将此字符串与指定对象进行比较。
+*       注意：只要字符串对象的字符序列一致结果一定是true.
+*       字符串的比较建议永远用equals进行比较是否相等！！
+*
+* public boolean equalsIgnoreCase (String anotherString) ：
+*   将此字符串与指定对象进行比较，忽略大小写
+*   忽略大小写比较字符串。只关心字符是否一致！
+
+04.能够使用文档查询String类的获取方法
+         public int length () ：返回此字符串的长度。
+         public String concat (String str) ：将指定的字符串连接到该字符串的末尾。
+         public char charAt (int index) ：返回指定索引处的 char值。
+         public int indexOf (String str) ：返回指定子字符串第一次出现在该字符串内的索引。
+         public String substring (int beginIndex) ：返回一个子字符串，从beginIndex开始截取字符串到字符
+         串结尾。
+         public String substring (int beginIndex, int endIndex) ：返回一个子字符串，从beginIndex到
+         endIndex截取字符串。含beginIndex，不含endIndex。
+05.能够使用文档查询String类的转换方法
+     public char[] toCharArray () ：将此字符串转换为新的字符数组。
+     public byte[] getBytes () ：使用平台的默认字符集将该 String编码转换为新的字节数组。
+     public String toLowerCase() ：使用默认语言环境的规则将此 String所有字符转换为小写。
+     public String toUpperCase() ：将此 String所有字符转换为大写，使用默认语言环境的规则。
+     public String replace (CharSequence target, CharSequence replacement) ：将与target匹配的字符串使
+     用replacement字符串替换
+     *    replaceAll
+
+能够理解static关键字
+     属于类。
+
+能够写出静态代码块的格式
+    static {
+    }
+    与类一起加载并自动执行的代码！
+能够使用Arrays类操作数组
+    Arrays.toString(数组) 打印数组内容
+    Arrays.sort(数组) 排序
+能够使用Math类进行数学运算

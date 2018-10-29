@@ -1,0 +1,59 @@
+能够明确API的使用步骤
+能够使用Scanner类获得键盘录入数据
+   Scanner scan = new Scanner(System.in);
+   String rs = scan.next();
+   String rs = scan.nextLine();
+   int rs = scan.nextInt();
+能够使用Random类生成随机数   、
+   Random ran = new Random();
+   int data = ran.nextInt(10) ; // 0 - 9
+能够使用数组存储自定义类型并遍历
+     Student[] stus = new Student[3];
+能够使用ArrayList集合的构造方法创建ArrayList集合对象
+     ArrayList list = new ArrayList();
+能够使用ArrayList集合存储数据
+    list.add(元素);
+能够使用ArrayList集合中常用的方法
+    add
+    remove
+    get
+    size
+
+能够使用ArrayList集合存储字符串并遍历
+        // JDK1.7以后后面的类型什么可以省略不写
+           ArrayList<String> lists = new ArrayList<>();
+           lists.add("徐明明");
+           lists.add("杨斌");
+           lists.add("邓伟");
+
+           for(int i = 0 ; i < lists.size() ; i++ ){
+               String name = lists.get(i);
+               System.out.println(name);
+           }
+
+能够使用ArrayList集合存储自定义对象并遍历
+          ArrayList<Student> stus = new ArrayList<>();
+          // 创建三个学生对象
+          Student yb = new Student(1,"杨斌",21,'男',"99期");
+          Student zm = new Student(2,"周铭",22,'男',"99期");
+          Student xmm = new Student(3,"徐明明",21,'男',"99期");
+          // 把三个学生对象加入到stus集合中去
+          stus.add(yb);
+          stus.add(zm);
+          stus.add(xmm);
+
+          for(int i = 0 ; i < stus.size() ; i++ ) {
+              Student stu = stus.get(i);
+              System.out.println(stu.getName()+"==>" + stu.getClassName());
+          }
+
+能够使用ArrayList类作为形式参数和返回值类型
+// ArrayList类作为形式参数
+      public static void printList(ArrayList<String> names){}
+// 返回值类型
+       public static ArrayList<Integer> getArrayList(ArrayList<Integer> list){
+             // 创建一个新的集合用于保存所有的偶数并返回
+             ArrayList<Integer> list1 = new ArrayList<>();
+
+             return  list1;
+         }

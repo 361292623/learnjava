@@ -1,0 +1,49 @@
+描述final修饰的类的特点：类绝育了，不能被继承
+描述final修饰的方法的特点 ： 方法不能被重写
+能够说出权限修饰符作用范围
+    参见代码！
+    权限修饰符:
+       在Java中提供了四种访问权限，使用不同的访问权限修饰符修饰时，
+       被修饰的内容会有不同的访问权限，
+
+       权限修饰符可以修饰成员变量，修饰方法，修饰内部类。
+
+        public：公共的。        当前类 当前包 其他任何地方都可以直接访问。
+        protected：受保护的     当前类 当前包 在子类中都可以直接访问。
+        缺省：默认的            当前类 当前包 访问。
+        private：私有的        当前类 访问。
+
+        public > protected > 缺省 > private
+
+
+说出内部类的概念
+    一个类中包含另一个类。
+能够理解引用类型作为成员变量
+     private Clazz clazz
+
+能够理解引用类型作为方法参数
+       // 引用类型作为方法的参数。
+       public static void start(Swiming swimer , String name){
+           System.out.println(name);
+           swimer.swim();
+       }
+
+能够理解引用类型作为方法返回值类型
+
+       // 引用类型作为方法的返回值
+       public static Swiming getSwmer(){
+          /* Swiming s = new Swiming() {
+               @Override
+               public void swim() {
+                   System.out.println("开始愉快的狗爬式游泳");
+               }
+           };
+           return s ;*/
+
+          return new Swiming() {
+              @Override
+              public void swim() {
+                  System.out.println("开始愉快的狗爬式游泳");
+              }
+          };
+       }

@@ -1,0 +1,58 @@
+01.理解容器的概念
+   可以存储多个数据，每个数据称为该容器的元素。
+
+02.掌握数组的第一种定义方式
+   int[] arrs = new int[]{1,2,3};
+
+03.掌握数组的第二种定义方式
+   int[] arrs = {1,2,3};
+
+04.掌握数组的第三种定义方式
+   int[] arrs = new int[5];
+
+
+05.使用索引访问数组的元素
+   arrs[2];
+
+
+06.了解数组的内存图解
+   方法栈  堆内存
+
+
+07.了解空指针和越界异常
+   int[] arrs = new int[4];
+   arrs[4]; // 越界了
+   arrs = null ;
+   arrs[2]; // 空指针
+
+
+08.掌握数组的遍历
+     double[] allScores = new double[]{89 ,96 ,100 ,98.5 ,99 ,89.5};
+     for(int i = 0 ; i < allScores.length ; i++ ){
+         System.out.println(allScores[i]);
+     }
+
+
+09.掌握数组最大值的获取
+    参见代码！
+    (1)定义一个变量用于保存当前最大值，默认认为第一个元素就是当前最大值。
+    （2)遍历数组中的每个元素依次与当前最大值进行比较，如果比最大值
+         大，应该替换最大值为这个值！
+
+10.了解数组反转的原理
+     前后元素对换！
+
+11.了解数组作为方法参数传递
+   public static void printArr(int[] arrs){
+        for(int i = 0 ; i < arrs.length ; i++ ) {
+            System.out.print(arrs[i]+" ");
+        }
+        System.out.println(); // 换行！
+    }
+
+12.了解数组作为方法的返回值
+    public static int[] getArr(){
+        int[] arrs = new int[]{1,2,3,4};
+        // 返回的是一个int类型数组的地址！
+        return arrs ;
+    }

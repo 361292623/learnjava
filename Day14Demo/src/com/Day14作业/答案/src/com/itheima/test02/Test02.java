@@ -19,7 +19,7 @@ public class Test02 {
         // Class.forName("java.util.ArrayList");
         Class c = list.getClass();
         // 获得add方法对象
-        Method addM = c.getMethod("add", Object.class);
+        Method addM = c.getDeclaredMethod("add", Object.class);
         // 通过反射调用list对象的add方法
         addM.invoke(list, "aaaa");
         System.out.println(list);
