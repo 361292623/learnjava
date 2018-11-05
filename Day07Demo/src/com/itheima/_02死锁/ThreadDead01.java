@@ -17,6 +17,7 @@ public class ThreadDead01 {
                        System.out.println( Thread.currentThread().getName()
                                +"进入等待状态");
                        try {
+
                            obj.wait(); // 暂停了自己，释放了锁。
                        } catch (InterruptedException e) {
                            e.printStackTrace();

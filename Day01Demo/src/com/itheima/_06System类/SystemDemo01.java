@@ -52,8 +52,8 @@ public class SystemDemo01 {
         /*
         * arraycopy(Object src,  int srcPos,Object dest, int destPos, int length)
         * 参数一：需要被复制的原数组
-        * 参数二：从那个元素索引位置开始复制
-        * 参数三：要复制到那个数组
+        * 参数二：从哪个元素索引位置开始复制
+        * 参数三：要复制到哪个数组
         * 参数四：复制到哪个索引位置开始
         * 参数五：要复制多少个元素。
         */

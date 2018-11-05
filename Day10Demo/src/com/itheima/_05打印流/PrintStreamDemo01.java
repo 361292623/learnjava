@@ -22,11 +22,14 @@ public class PrintStreamDemo01 {
         //PrintStream ps = new PrintStream("src/ps.txt");
         //ps.write("itheima".getBytes()); // 写字节。
 
-        PrintWriter ps = new PrintWriter("src/ps.txt");
+        PrintWriter ps = new PrintWriter("Day10Demo\\src\\com\\itheima\\_05打印流\\ps.txt");
         //ps.write("itheima"); // 写字符。
 
         ps.println(100); // 打印整数
         ps.println(false); //
+        ps.println("我爱你");
+        ps.println("我爱你");
+        ps.println("我爱你");
         ps.println("我爱你");
 
         ps.close();

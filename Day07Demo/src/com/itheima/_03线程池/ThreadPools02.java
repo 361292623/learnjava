@@ -20,7 +20,7 @@ public class ThreadPools02 {
         Future<String> t2 = pools.submit(call);
         Future<String> t3 = pools.submit(call);
 
-        // 是重复使用之前的三个线程中的某一个。
+        // 第四个任务是重复使用之前的三个线程中的某一个。
         Future<String> t4 = pools.submit(call);
 
         String rs1 = t1.get();

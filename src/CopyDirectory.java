@@ -6,7 +6,7 @@ import java.io.File;
 
 
 
-public class test {
+public class CopyDirectory {
 
     public static void main(String[] args) throws Exception {
        // org.apache.commons.io.FileUtils.
