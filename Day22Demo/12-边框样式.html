@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>边框样式</title>
+    <style>
+        /*
+        border			简写属性，用于把针对四个边的属性设置在一个声明。
+        border-style  	用于设置元素所有边框的样式，或者单独地为各边设置边框样式。
+                        dotted : 定义点状边框。在大多数浏览器中呈现为实线。
+                        dashed : 定义虚线。在大多数浏览器中呈现为实线。
+                        solid : 定义实线。
+                        double : 定义双线。双线的宽度等于  border-width  的值。
+        border-width  	简写属性，用于为元素的所有边框设置宽度，或者单独地为各边边框设置宽度。
+        border-color  	简写属性，设置元素的所有边框中可见部分的颜色，或为 4 个边分别设置颜色。
+        border-radius 	设置边框圆角
+                                                    */
+        div {
+            width: 200px;
+            height: 200px;
+            /*设置边框粗细*/
+            /*border-width: 10px;
+            !*设置边框颜色*!
+            border-color: red;
+            !*设置边框样式*!
+            border-style: solid;
+
+            /*border: 2px solid orange;*/
+
+            border-style: solid;
+
+            border-bottom-width: 10px;
+            border-left-width: 20px;
+            border-right-width: 30px;
+            border-top-width: 40px;
+
+            border-top-color: red;
+            border-bottom-color: blue;
+            border-left-color: green;
+            border-right-color: yellow;
+
+            /* 设置圆角半径 */
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>div</div>
+</body>
+</html>

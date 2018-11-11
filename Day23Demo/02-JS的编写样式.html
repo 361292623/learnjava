@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>JS三种样式</title>
+
+    <!--内部样式：JS代码编写在<script>标签中，该标签可以出现在网页的任意位置，
+        一般编写在head标签中
+    -->
+    <script>
+        // 定义了一个函数：等价于Java的方法
+        function btnClick() {
+            alert('哎..别点了');
+        }
+    </script>
+
+    <!--外部样式(推荐使用)：JS编写在外部的js文件中，需要使用的网页引入该文件即可
+        src： js文件的路径
+        type：指定脚本语言的类型，在h5可以省略，在h5之前必须加上。
+            大类型/小类型
+            image/png
+            text
+
+       注意事项
+        1. 在同一个网页中可以出现多次<script>标签，每个标签都会依次执行。
+        2. <script>标签可以出现在网页中任何位置，一般放在<head>标签中。
+        3. <script>标签的开始标签和结束标签必须成对出现。
+        4. 引用外部js文件的<script>标签体中不能编写js代码了。
+
+    -->
+    <script src="js/outer.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <!--window对象的函数alert: 在网页上弹出一个对话框-->
+    <!--行内样式-->
+    <input type="button" value="我是按钮" onclick="btnClick();">
+    <input type="button" value="你是按钮" onclick="btnClick01();">
+</body>
+</html>

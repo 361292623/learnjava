@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>事件案例</title>
+
+    <style>
+        img {
+            width: 250px;
+        }
+    </style>
+
+    <script>
+
+       /*
+        1. 当网页加载完成后，用户名默认显示：jack
+        2. 当鼠标经过文字：” 鼠标经过看美女” 显示效果如右图
+        3. 当鼠标离开文字：”鼠标经过看美女”显示效果如左图
+        4. 当文本输入框获得焦点时，清空文本输入框的文字。
+        5. 当文本输入框失去焦点时，设置文本输入框内容为：jack
+        6. 当改变城市时，弹框显示用户选择的城市名
+        7. 当点击提交按钮时，提交表单。*/
+
+       // 当网页加载完成之后调用
+       function loadSuccess() {
+           alert('调用了222');
+       }
+
+       // 注册事件的方式2： 通过JS注册事件
+       // 当页面加载完成之后执行指定的函数(匿名函数)
+       window.onload = function () {
+           // 1. 当网页加载完成后，用户名默认显示：jack
+            // 根据ID获得元素对象
+            var usernameElement = document.getElementById("userId");
+            // 设置value属性值
+            usernameElement.value = "jack";
+
+
+           // 获得图片元素对象并注册鼠标移入事件
+           document.getElementById("picture").onmouseover = function () {
+               document.getElementById("picture").src="img/0.jpg";
+           }
+       }
+
+        // 2. 当鼠标经过文字：” 鼠标经过看美女” 显示效果如右图
+        function showImage() {
+            // 根据id获得图片元素对象
+            document.getElementById("picture").src="img/girl1.jpg";
+            // document.getElementById("userId").value = Math.random();
+        }
+
+        // 3. 当鼠标离开文字：”鼠标经过看美女”显示效果如左图
+       function hiddenImage() {
+           // 根据id获得图片元素对象
+           document.getElementById("picture").src= null;
+       }
+
+        //  4. 当文本输入框获得焦点时，清空文本输入框的文字。
+        function clearText() {
+            document.getElementById("userId").value = null;
+        }
+
+        // 5. 当文本输入框失去焦点时，设置文本输入框内容为：jack
+        function showText() {
+            document.getElementById("userId").value = "jack";
+        }
+
+        // 6. 当改变城市时，弹框显示用户选择的城市名
+        function cityValueChanged(select) {
+            alert(select.value);
+        }
+        // 7. 当点击提交按钮时，判断选择的城市是否是广州，是则允许提交表单，否则不允许提交。
+        // 如果表单需要通过一个函数决定是否提交，则该函数需要返回一个boolean值，
+        // true：允许提交  false：禁止提交
+        function submitForm() {
+           var city = document.getElementById("city").value;
+            if (city == '广州'){
+                // 允许提交
+                return true;
+            }
+            // 禁止提交
+            return false;
+        }
+        // 双击图片触发该方法
+        function changeImage(){
+           document.getElementById("picture").src="img/0.jpg";
+        }
+    </script>
+</head>
+<!--注册事件方式1：通过事件属性绑定函数-->
+<body>
+    <img id="picture" src="" alt="鼠标经过看美女"
+    onmouseout="hiddenImage();"
+    ondblclick="changeImage();">
+    <form action="01-JS初体验.html" onsubmit="return submitForm();">
+        用户名：<input id="userId" type="text" name="username"
+                   onfocus="clearText();"
+        onblur="showText();"><br>
+        城市：
+        <select id="city" onchange="cityValueChanged(this);">
+            <option>北京</option>
+            <option>上海</option>
+            <option>广州</option>
+            <option>东莞</option>
+        </select><br>
+        <input type="submit">
+    </form>
+
+<!--<script>
+    // 获得图片元素对象并注册鼠标移入事件
+    document.getElementById("picture").onmouseover = function () {
+        document.getElementById("picture").src="img/0.jpg";
+    }
+</script>-->
+</body>
+</html>

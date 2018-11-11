@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>层级选择器</title>
+
+    <style>
+        /* 层级选择器 */
+        #myDiv span {
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- 在一个div中有一个span，span中有文字，将div中的span设置为蓝色的字 -->
+    <div id="myDiv">
+        <span>我是div中的span</span>
+        <p>
+            <span>我是p中的span</span>
+        </p>
+    </div>
+
+    <div>
+        <span>我是div中的span</span>
+        <p>
+            <b><span>我是p中的span</span></b>
+        </p>
+    </div>
+    <span>外部的span</span>
+</body>
+</html>

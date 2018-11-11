@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+</head>
+<body>
+    <h2>用户注册</h2>
+    <hr>
+
+    <form action="02-处理登录的页面.html">
+        <table>
+            <!--用户名-->
+            <tr>
+                <td>用户名：</td>
+                <td>
+                    <input type="text" name="username" placeholder="请输入用户名">
+                </td>
+            </tr>
+            <!--密码-->
+            <tr>
+                <td>密码：</td>
+                <td>
+                    <input type="password" name="password">
+                </td>
+            </tr>
+            <!--性别-->
+            <tr>
+                <td>性别：</td>
+                <td>
+                    <!-- radio 单选框
+                        checked 设置单选框中
+                        如果属性名和属性值相同时，可以直接给属性名，不用设置属性值。
+                        如果表单项的内容不能通过用户输入时，必须指定一个value属性。
+                     -->
+                    <input type="radio" name="sex" checked="checked" value="man"> 男
+                    <input type="radio" name="sex" value="woman"> 女
+                    <input type="radio" name="sex" value="yao"> 妖
+                </td>
+            </tr>
+
+            <!--爱好-->
+            <tr>
+                <td>爱好：</td>
+                <td>
+                    <!--checkbox：复选框-->
+                    <input type="checkbox" name="hobby" value="swimming" checked> 游泳
+                    <input type="checkbox" name="hobby" value="wcode"> 写代码
+                    <input type="checkbox" name="hobby" value="lcode"> 鲁代码
+                    <input type="checkbox" name="hobby" value="qcode"> 敲代码
+                </td>
+            </tr>
+
+            <!--学历-->
+            <tr>
+                <td>学历：</td>
+                <td>
+                    <!--下拉列表-->
+                    <select name="edu" size="2" multiple>
+                        <option value="bk">本科</option>
+                        <option value="dz">大专</option>
+                        <option value="gz">高中</option>
+                        <option value="xx">小学</option>
+                    </select>
+                </td>
+            </tr>
+
+            <!--照片-->
+            <tr>
+                <td>照片</td>
+                <td>
+                    <!--文件域
+                        accept：设置可以选择的文件类型
+                            大类型/小类型
+                            image/*
+                    -->
+                    <input type="file" name="pic" accept="image/*">
+                </td>
+            </tr>
+
+            <!--个人简介-->
+            <tr>
+                <td>个人简介</td>
+                <td>
+                    <!-- textarea文本域
+                         rows：指定行数
+                         cols：指定列数
+                    -->
+                    <textarea name="info" rows="5" cols="40">呵呵</textarea>
+                </td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">
+                    <input type="submit" value="注册">
+                    <input type="reset" value="清空">
+                    <input type="button" value="按钮">
+
+                    <!--等价于submit-->
+                    <button>按钮01</button>
+
+                    <!--普通按钮：需要通过js监听事件-->
+                    <button type="button">按钮02</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

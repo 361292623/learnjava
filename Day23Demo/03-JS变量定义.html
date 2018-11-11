@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>JS变量定义</title>
+
+    <script>
+        // 定义变量
+        var a = 10;
+        var b = 1.5;
+        var c = true;
+        var d = 'c';
+        var e = "abc";
+        var f = null;
+        var g = new Date();
+        var h;  // undefined 未定义
+
+        // 输出变量
+        document.write("a = " + a + "<br>");
+        document.write("b = " + b + "<br>");
+        document.write("c = " + c + "<br>");
+        document.write("d = " + d + "<br>");
+        document.write("e = " + e + "<br>");
+        document.write("f = " + f + "<br>");
+        document.write("g = " + g + "<br>");
+        document.write("h = " + h + "<br>");
+
+        document.write("<hr>");
+        // 重新变量a
+        var a = "xxx", m = 200;
+        document.write("a = " + a + "<br>");
+        document.write("m = " + m + "<br>");
+
+        document.write("<hr>");
+        {
+           var n = true;
+        }
+        document.write("n = " + n + "<br>");
+        /*
+        - var关键字是否必须？ 可以省略，建议保留
+        - 变量名是否可以重复或重复定义？ 可以重复定义
+        - 一条语句是否可以定义多个变量？ 可以定义多个变量，多个变量之间使用逗号分隔
+        - 大括号能否对作用域产生隔离的作用？ 没有隔离作用，后面可以继续使用该变量
+        */
+    </script>
+</head>
+<body>
+
+</body>
+</html>

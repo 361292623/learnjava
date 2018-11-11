@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>登录案例</title>
+    <style>
+       /* 1. 使用表格进行布局，居中,宽300px，高180px; 边框solid 1px gray，内边距为0，圆角5px。
+        2. 表格有四行，第一行和第四行跨2列，第一列占30%的宽度，第一行是标题th，第四行是放按钮
+        3. td的文字对齐居中，字体大小14px。th字体大小18px
+        4. table添加背景，重复平铺
+        5. 用户名和密码文本框使用类选择器(也可以使用[属性选择器])，宽150px，高30px，边框用实线，圆角，1个宽度，黑色
+        6. 使用伪类样式，当鼠标移动到文本框上的时候，变成虚线橙色边框
+        7. 文本框前面有头像，密码框前面有键盘，左内边距35px*/
+
+
+        table {
+            width: 300px;
+            height: 180px;
+            background-image: url("img/bg1.jpg");
+            border: 1px solid gray;
+            border-radius: 8px;
+            margin: auto;
+        }
+
+       /*td的文字对齐居中，字体大小14px。th字体大小18px*/
+        td[class] {
+            text-align: center;
+            font-size: 14px;
+        }
+
+       /*输入框：宽150px，高30px，边框用实线，圆角，1个宽度，黑色
+        左内边距35px
+       */
+       input[id] {
+           width: 150px;
+           height: 30px;
+           border: 1px solid black;
+           border-radius: 5px;
+           padding-left: 35px;
+           outline: none;
+       }
+
+       /*6. 使用伪类样式，当鼠标移动到文本框上的时候，变成虚线橙色边框*/
+       input[id]:focus {
+           border: 2px dashed orange;
+       }
+
+        input[id='userId'] {
+            background: white url("img/head.png") no-repeat;
+        }
+
+        input[id='pwdId'] {
+            background: white url("img/keyboard.png") no-repeat;
+        }
+    </style>
+</head>
+<body>
+
+
+        <table>
+            <form>
+                <tr>
+                    <th colspan="2">用户登录</th>
+                </tr>
+                <tr>
+                    <td class="username">用户名：</td>
+                    <td>
+                        <input id="userId" type="text" name="username">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="username">密码：</td>
+                    <td>
+                        <input id="pwdId" type="password" name="password">
+                    </td>
+                </tr>
+                <tr >
+                    <td></td>
+                    <td >
+                        <input type="image" src="img/regbtn.jpg">
+                    </td>
+                </tr>
+            </form>
+        </table>
+
+
+
+
+</body>
+</html>

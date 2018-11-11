@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+
+    <style>
+        /*属性选择器*/
+        p[id='p1'] {
+            font-size: 30px;
+            color: green;
+        }
+
+        p[id='p2'] {
+            font-size: 20px;
+            color: red;
+        }
+
+        /*[id] {
+            color: yellow;
+        }*/
+
+        [id='p1'] {
+            color: yellow;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- 1：p标签中带id属性的元素，字体大小为30px，颜色为green。-->
+    <p id="p1">我是p</p>
+    <!-- 2：p标签id属性值为p1的元素，字体大小为20px，颜色为red。-->
+    <p id="p2">你也是p</p>
+    <span id="xx">你也是p</span>
+</body>
+</html>

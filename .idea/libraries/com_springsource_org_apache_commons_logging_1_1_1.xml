@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="com.springsource.org.apache.commons.logging-1.1.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Day20Demo/lib/com.springsource.org.apache.commons.logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Day20Demo/lib/druid-1.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Day20Demo/lib/mysql-connector-java-8.0.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Day20Demo/lib/spring-beans-4.1.2.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Day20Demo/lib/spring-core-4.1.2.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Day20Demo/lib/spring-jdbc-4.1.2.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Day20Demo/lib/spring-tx-4.1.2.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

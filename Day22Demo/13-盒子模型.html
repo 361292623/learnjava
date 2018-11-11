@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <style>
+
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            margin: auto;
+        }
+
+        #one {
+            /* 设置底部外边距20px */
+            margin-bottom: 20px;
+            /*设置内边距：内容和边框的距离*/
+            padding-left: 20px;
+            padding-top: 20px;
+            box-sizing: border-box;
+        }
+
+        #two {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="one">内容</div>
+    <div id="two">内容</div>
+</body>
+</html>

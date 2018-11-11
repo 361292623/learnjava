@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选取器-链接</title>
+
+
+    <!--注意事项
+    a:hover 必须被置于 a:link 和 a:visited 之后，才是有效的。
+    a:active 必须被置于 a:hover 之后，才是有效的。-->
+
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        /*正常状态*/
+        a:link {
+            color: orange;
+        }
+
+        /*访问过状态*/
+        a:visited {
+            color: gainsboro;
+        }
+
+        /*鼠标悬停状态*/
+        a:hover {
+            color: #FF0000;
+        }
+
+        /*激活状态*/
+        a:active {
+            color: green;
+            font-size: 30px;
+        }
+
+        /*当文本输入框获得焦点时使用该样式*/
+        input[id]:focus{
+            background-color: yellow;
+        }
+
+        /*当鼠标悬停在表格行时使用该样式*/
+        tr:hover{
+            background-color: green;
+        }
+
+        td:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!--示例1：不同状态的下的超链接文字显示不同的颜色。-->
+    <a href="#">注册页面</a>
+    <!--示例2：文本输入框得到光标的时候，背景色变成黄色。-->
+    <input id="username" type="text">
+    <input type="text">
+
+    <!--示例3：表格数据，如果鼠标移动到某一行，这一行的背景色发生变化-->
+    <table border="1" cellspacing="0" cellpadding="0" width="450"
+           height="200" align="center">
+        <caption>学生成绩表</caption>
+        <!--tr：一个tr就是一行-->
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>成绩</th>
+        </tr>
+
+        <tr align="center">
+            <td>100</td>
+            <td>潘金莲</td>
+            <td>女</td>
+            <td>80</td>
+        </tr>
+        <tr align="center">
+            <td>100</td>
+            <td>潘金莲</td>
+            <td>女</td>
+            <td>80</td>
+        </tr>
+        <tr align="center">
+            <td>100</td>
+            <td>潘金莲</td>
+            <td>女</td>
+            <td>80</td>
+        </tr>
+        <tr align="center">
+            <td>100</td>
+            <td>潘金莲</td>
+            <td>女</td>
+            <td>80</td>
+        </tr>
+
+    </table>
+</body>
+</html>

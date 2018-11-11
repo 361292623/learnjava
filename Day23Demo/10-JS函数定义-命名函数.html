@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>命名函数</title>
+
+    <script>
+        /*  命名函数的定格式
+            function 函数名(参数列表){
+                 // 函数体
+
+                return 返回值;
+            }
+         */
+        // 定义一个函数求两个数之和。
+        function sum(a,b) {
+            return a + b;
+        }
+        // 函数不调用就不会执行
+        var result = sum(1,2);
+        document.write("result = " + result + "<br>");
+
+        // 在上一个示例中，在定义一个函数，求三个数之和。
+        // 在JS函数中没有重载的概念，后面定义的函数会覆盖前面定义的函数
+        // 调用函数时实参的个数和形参的个数可以不一致。
+        // 每一个JS函数中都会有一个arguments数组，所有的实参都是先存储到arguments数组中
+        function sum(a,b,c) {
+            // alert("执行了三个参数的函数");
+            for(var i = 0; i < arguments.length; i++){
+                document.write(arguments[i] + "&nbsp;");
+            }
+            document.write("<hr>");
+            return a + b + c;
+        }
+        var result = sum(1,2,3,101,102);
+        document.write("result = " + result + "<br>");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

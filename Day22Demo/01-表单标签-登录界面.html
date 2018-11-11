@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+</head>
+<body>
+
+    <h1>用户登录</h1>
+
+    <!--form表单标签
+            action：指定服务器地址
+            method: 指定提提交方式
+                get  默认值
+                post
+         注意事项
+            如果表单项的内容需要提交到服务器，则必须给表单项设置一个name属性。
+            username=zhangsan passwor=lisi
+    -->
+    <form action="02-处理登录的页面.html" method="post">
+        <!--普通文本输入框-->
+        用户名：<input type="text" name="username"> <br>
+        <!--密码输入框-->
+        密码：<input type="password" name="password"> <br>
+        <!--登录按钮-->
+        <input type="submit" value="登录">
+    </form>
+</body>
+</html>

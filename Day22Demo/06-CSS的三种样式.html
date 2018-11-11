@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS三种样式</title>
+
+    <!-- 外部样式(推荐使用)：样式代码编写在外部的css文件中，需要使用的网页引入外部css文件即可
+      link标签：用来引入外部的css文件
+           href：外部css文件的路径
+           rel：用来指定引入的外部css文件和当前网页文件的关系
+                stylesheet：样式文件
+   -->
+    <link href="css/out.css" rel="stylesheet">
+
+    <!--
+        内部样式：样式代码编写在<style>标签中 <style>标签可以出现在网页的任意位置
+        一般写在<head>标签中 ，只能作用当前页面的标签上。
+    -->
+    <style>
+        a {
+            color: orange;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+<body>
+    <!--行内样式: 样式代码编写在标签的style属性中 只作用当前标签中-->
+    <a href="#" style="color:red; text-decoration: none">我是超链接</a>
+    <a href="#">我是超链接</a>
+    <a href="#">我是超链接</a>
+    <span>我是超链接</span>
+</body>
+</html>

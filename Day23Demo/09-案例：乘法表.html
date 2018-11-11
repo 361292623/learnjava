@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>乘法表</title>
+
+    <style>
+        table {
+
+            /*设置边框为细边框*/
+            border-collapse: collapse;
+            margin: auto;
+        }
+
+        td {
+            padding: 5px;
+        }
+    </style>
+
+    <script>
+
+        // 输入行数
+        var row = prompt("请输入行数：");
+        // 输出一个表格
+        document.write("<table border='1'>");
+            // 输出表格标题
+            document.write("<caption>"+row+"&times;" +row + "乘法表</caption>")
+            for(var i = 1; i <=row; i++){
+                // 输出一个tr
+                document.write("<tr>");
+                    for(var j = 1;  j <= i; j++){
+                        // 输出一个td
+                        document.write("<td>");
+                        document.write(j + "&times;" + i + "=" + (i * j));
+                        document.write("</td>");
+                    }
+                document.write("</tr>");
+            }
+        document.write("</table>");
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

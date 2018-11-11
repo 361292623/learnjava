@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+
+    <script>
+        // 创建数组
+        var arr = [1,2,3,'a','abc',true];
+        // 修改长度
+        arr.length = 2;
+        arr[10] = "xxx";
+
+        // 普通for：遍历数组
+        for(var i = 0;i <arr.length;i ++){
+            document.write(arr[i] + "&nbsp;");
+        }
+        document.write("<hr>");
+        // for...of: 等价java增强for
+        for(var num of arr){
+            document.write(num + "&nbsp;");
+        }
+        document.write("<hr>");
+        // concat()：将多个数组合并一个数组
+        var arr01 = [1,2,3];
+        var arr02 = ['a','b','c'];
+        var arr03 = arr01.concat(arr02);
+        for(var num of arr03){
+            document.write(num + "&nbsp;");
+        }
+
+        document.write("<hr>");
+        // reverse(): 将数组元素反转
+        arr03.reverse();
+        for(var num of arr03){
+            document.write(num + "&nbsp;");
+        }
+
+        document.write("<hr>");
+        // join(separator) 使用指定的分隔符将数组元素连接成一个字符串返回：与String类的split方法功能相反
+        var result = arr03.join("🙄");
+        document.write("result = " + result);
+
+        document.write("<hr>");
+        // sort：对数组元素排序
+        var arr01 = [10,1232,213,12,454,102];
+        for(var num of arr01){
+            document.write(num + "&nbsp;");
+        }
+        document.write("<hr>");
+        // 使用默认规则排序：默认按照ASCII排序
+        // arr01.sort();
+        // 自定义比较器排序
+        arr01.sort(function (o1,o2) {
+            return o2 - o1;
+        })
+        for(var num of arr01){
+            document.write(num + "&nbsp;");
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
