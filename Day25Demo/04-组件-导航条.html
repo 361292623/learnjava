@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!--网页编码-->
+    <meta charset="utf-8">
+    <!--告诉浏览器使用最新的内核解析当前页面-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--视口：网页容器的大小-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap模板</title>
+
+    <!-- 引入 Bootstrap 样式文件 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+    <body>
+    <h1>导航条</h1>
+        <!-- nav 等价于div
+            navbar-default 默认样式，背景颜色为白色
+            navbar-inverse 颜色反转，背景颜色黑色
+         -->
+        <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <!-- 在手机上会显示一个汉堡按钮 -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">传智播客</a>
+            </div>
+            <!-- 导航条的链接，下拉列表，表单等内容 -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">JavaEE<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Android</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                           role="button" aria-haspopup="true" aria-expanded="false">请选择<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <!--分割线-->
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <!--分割线-->
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="搜索关键字">
+                    </div>
+                    <button type="submit" class="btn btn-default">
+                        <span class="glyphicon glyphicon-search">搜索</span>
+                    </button>
+                </form>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+        <!-- 可选的：jQuery库 (如果需要使用Bootstrap的插件则需要引入下面两个js库) -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

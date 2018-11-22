@@ -1,0 +1,17 @@
+.jx {
+    border-bottom: 2px solid orange;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 10px;
+}
+
+/*⾃自定义样式，写⼀一⾏行行⽂文字。样式名company：字体⼤大⼩小12，背景⾊色#ffc900，⽂文字居中*/
+/*对⻬齐，⾼高度与⾏行行⾼高为40px*/
+.company{
+    font-size: 12px;
+    background-color: #ffc900;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: grey;
+}

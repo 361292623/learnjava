@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息管理</title>
+    <style type="text/css">
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        th {
+            background-color: lightgrey;
+        }
+
+        tr:hover {
+            background-color: yellowgreen;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+     /*
+         - 使用CSS：当鼠标移入时，该行的背景颜色为黄色，当鼠标移出时，该行的背景颜色还原；
+         - 当点击添加按钮“添加一行数据”时，文本框中的数据添加到表格中且文本框置空；
+         - 当点击表格中的“删除”时，该行数据被删除，删除前确认
+         - 当点击表格第一行的复选框的时候，下面每一行都选中。当取消的时候，下面每一行都取消。
+     */
+
+     // 监听添加按钮点击
+     function addBtnClick() {
+         // 获得文本输入框元素对象
+         var noElement = document.getElementById("no");
+         var nameElement = document.getElementById("name");
+
+         // 获得学号
+         var number = noElement.value;
+         // 判断学号是否为空
+         // String类中trim方法：去除左右两边的空格
+         // String price = " 100 "; price.trim()==> "100" ==> Integer.parseInt(price.trim());
+         if (number.trim().length == 0){
+             // 如果为空：表示没有输入数据，则提示用户先输入学号
+             alert("请输入学号");
+             return;
+         }
+         // 获得姓名
+         var name = nameElement.value;
+         // 判断姓名是否为空
+         if (name.trim().length == 0){
+             // 如果为空：表示没有输入数据，则提示用户先输入姓名
+             alert("请输入姓名");
+             return;
+         }
+
+         // 创建tr元素对象
+         // 等价于：<tr></tr>
+         var tr = document.createElement("tr");
+         // 创建td元素对象：<td></td>
+         var td = document.createElement("td");
+         // 设置td内容：<td>10086</td>
+         td.innerHTML = number;
+         // 将td添加tr元素上:<tr><td>10086</td></tr>
+         tr.appendChild(td);
+
+         // 注意：tr的直接父元素不是table标签，是tbody元素
+         // 先获得tbody元素对象
+         var tbody = document.getElementsByTagName("tbody")[0];
+
+         // 将tr元素添加tbody上
+         tbody.appendChild(tr);
+
+         // 清空文本输入框的内容
+         noElement.value = null;
+         nameElement.value = null;
+
+     }
+    </script>
+</head>
+<body>
+<div>
+    <table border="1" cellspacing="0" cellpadding="3">
+        <!--tr的父元素是tbody-->
+        <tr>
+            <th>
+                <input type="checkbox" id="all">
+            </th>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="item">
+            </td>
+            <td>00001</td>
+            <td>潘金莲</td>
+            <td>
+                <input type="button" value="删除">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="item">
+            </td>
+            <td>00002</td>
+            <td>鲁智深</td>
+            <td>
+                <input type="button" value="删除">
+            </td>
+        </tr>
+    </table>
+    <br />
+    学号：<input type="text" id="no" value="" />
+    姓名：<input type="text" id="name" value="" />
+    <input type="button" id="addBtn" value="添加" onclick="addBtnClick();"/>
+</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>根据标签的属性找元素</title>
+    <style>
+        table {
+            width: 350px;
+            border-collapse: collapse;
+        }
+
+        td {
+            text-align: center;
+            padding: 3px;
+        }
+    </style>
+
+
+    <script type="text/javascript">
+        window.onload = function () {
+            // 获得第1个按钮并注册事件
+            document.getElementById("b1").onclick = function () {
+                // (通过标签名)给tr的奇数行添加背景色
+                // 获得所有tr元素对象
+                var trs = document.getElementsByTagName("tr");
+                // 遍历数组
+                for(var i = 0; i < trs.length; i++){
+                    // 根据索引获得tr元素对象
+                    var tr = trs[i];
+                    // 判断是否是奇数行
+                    if(i % 2 == 0){
+                        // 设置tr的背景颜色
+                        tr.style.backgroundColor = "red";
+                    }
+                }
+            }
+
+
+            // 获得第2个按钮并注册事件
+            document.getElementById("b2").onclick = function () {
+                // (通过name属性)选中所有的商品
+                // 根据name属性获得所有的复选框对象
+                var checkboxs = document.getElementsByName("product");
+                // 遍历每一个复选框对象
+                for(var i = 0; i < checkboxs.length; i++){
+                    // 根据索引获得复选框对象并设置选中状态
+                    checkboxs[i].checked = true;
+
+                    // 反选
+                    // checkboxs[i].checked = !checkboxs[i].checked;
+                }
+            }
+
+            // 获得第3个按钮并注册事件
+            document.getElementById("b3").onclick = function () {
+                // (通过类名)给a添加链接
+                var as = document.getElementsByClassName("company");
+                // 遍历数组
+                for(var i = 0; i < as.length; i++){
+                    // 获得每一个链接元素对象并设置href属性
+                    as[i].href = "#";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="(通过标签名)给tr的奇数行添加背景色" id="b1"/>
+<input type="button" value="(通过name属性)选中所有的商品" id="b2"/>
+<input type="button" value="(通过类名)给a添加链接" id="b3"/>
+<hr/>
+<table border="1">
+    <tr>
+        <td>100</td>
+        <td>100</td>
+        <td>100</td>
+    </tr>
+    <tr>
+        <td>200</td>
+        <td>200</td>
+        <td>200</td>
+    </tr>
+    <tr>
+        <td>300</td>
+        <td>300</td>
+        <td>300</td>
+    </tr>
+    <tr>
+        <td>400</td>
+        <td>400</td>
+        <td>400</td>
+    </tr>
+</table>
+<hr/>
+<input type="checkbox" name="product"> 自行车
+<input type="checkbox" name="product"> 电视机
+<input type="checkbox" name="product"> 洗衣机
+<hr/>
+<a class="company">传智播客</a><br/>
+<a class="company">传智播客</a><br/>
+<a class="company">传智播客</a><br/>
+
+
+</body>
+</html>

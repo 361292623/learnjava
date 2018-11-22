@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒计时跳转</title>
+</head>
+<body>
+<div><span id="time">5</span>秒后跳转</div>
+
+</body>
+<script>
+    outtime =5;
+
+    window.onload = function () {
+        taskId = window.setInterval(changeTime,1000);
+
+
+    }
+    function changeTime() {
+        outtime--;
+        if(outtime == 0){
+            //location.href="BOM练习.html"  ;
+            window.open("BOM练习.html");
+            window.clearInterval(taskId);
+        }
+        document.getElementById("time").innerHTML= ""+outtime;
+
+
+    }
+</script>
+</html>

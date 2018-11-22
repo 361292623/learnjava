@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE bookshelf SYSTEM "bookshelf.dtd">
+<bookshelf>
+    <book>
+        <title>金瓶梅</title>
+        <author gender="男" 姓名="taozhan" 职务="程序员">陶震</author>
+        <price>10</price>
+    </book>
+    <book>
+        <title>JavaEE入门到入土</title>
+        <author gender="男" 姓名="dilei" 爱好="钓鱼">地雷</author>
+        <price>99.9</price>
+    </book>
+</bookshelf>

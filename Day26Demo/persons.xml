@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--需求：编写 xml 文档，用于描述人员信息，person 代表一个人员，id
+      是人员的属性代表人员编号。人员信息，包括 age 年龄、name 姓名、sex 性别信息。
+       -->
+
+        <!--
+            - 一个XML文档中只能有一个根标签。
+            - 开始标签和结束标签必须成对出现。
+            - 一个标签中可以嵌套若干子标签，但是必须合理嵌套，不能交叉嵌套。
+            - 例如：welcome to <b>www.itcast.cn</b>是错误的。
+       -->
+<persons>
+    <person id="9518" gender="男">
+        <!--有主体标签-->
+        <age>20</age>
+        <name>jack</name>
+        <sex>男
+            <a><b>xxx</b></a>
+        </sex>
+        <!--无主体标签-->
+        <address />
+    </person>
+    <person>
+        <age>21</age>
+        <name>rose</name>
+        <sex>女</sex>
+    </person>
+
+    <sql>
+        select * from student where id &lt; 2;
+        <!-- & > " ' -->
+        &amp;  &gt;  &quot;  &apos;
+
+
+        <!--CDATA区：能够保证内容原样输出-->
+        <![CDATA[
+
+            select * from student where id < 2 and age < 18;
+        ]]>
+
+    </sql>
+
+</persons>

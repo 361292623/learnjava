@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            width: 350px;
+            height: 100px;
+            text-align: center;
+            border-collapse: collapse;
+            color: orange;
+        }
+        td{
+
+            border: 1px solid whitesmoke;
+        }
+        body{
+            background-color: #3c3f41;
+        }
+        span{
+            color:#e6ebf0;
+
+
+        }
+
+
+    </style>
+</head>
+<body>
+<div><span><button id="addcolo">基行加色</button></span>
+    <span><button id="holy">全选</button></span>
+    <span><button id="jia">加链接</button></span></div>
+<hr color="#d1ffa0">
+<table>
+    <tr>
+        <td>100</td>
+        <td>100</td>
+        <td>100</td>
+    </tr>
+    <tr>
+        <td>200</td>
+        <td>200</td>
+        <td>200</td>
+    </tr>
+    <tr>
+        <td>300</td>
+        <td>300</td>
+        <td>300</td>
+    </tr>
+    <tr>
+        <td>400</td>
+        <td>400</td>
+        <td>400</td>
+    </tr>
+    <tr>
+        <td>500</td>
+        <td>500</td>
+        <td>500</td>
+    </tr>
+</table>
+<hr color="#d1ffa0">
+<div>
+    <input type="checkbox" name="mycheck" > <span>固体火箭</span>
+    <input type="checkbox" name="mycheck" > <span>无工质发动机</span>
+    <input type="checkbox" name="mycheck" > <span>等离子发动机</span>
+    <input type="checkbox" name="mycheck" > <span>曲率驱动</span>
+    <input type="checkbox" name="mycheck" > <span>跃迁</span>
+</div>
+<hr color="#d1ffa0">
+<div>
+    <a class="lianjie"><span>这个是链接</span></a><br>
+    <a class="lianjie">这个是链接</a><br>
+    <a class="lianjie">这个是链接</a><br>
+</div>
+<hr color="#d1ffa0">
+</body>
+
+
+
+<script>
+document.getElementById("addcolo").onclick = function () {
+    var trs = document.getElementsByTagName("tr");
+    for(var i = 0;i< trs.length;i++){
+        if(i%2==0){
+            trs[i].style.backgroundColor = "#9aa698";
+        }
+    }
+};
+document.getElementById("holy").onclick = function () {
+    var chrs = document.getElementsByName("mycheck");
+    for(var i =0 ; i< chrs.length;i++){
+    if(chrs[i].checked==false){
+        for(var i =0 ; i< chrs.length;i++){
+            chrs[i].checked=true;
+        }
+        break;
+    }
+    if(i==chrs.length-1){
+        for(var i =0 ; i< chrs.length;i++){
+            chrs[i].checked=false;
+        }
+    }
+
+
+    }
+}
+
+document.getElementById("jia").onclick =function () {
+    var lian = document.getElementsByClassName("lianjie");
+
+    for(var a =0; a < lian.length;a++){
+        lian[a].href="#";
+    }
+}
+
+
+
+</script>
+</html>

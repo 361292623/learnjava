@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>JS操作CSS样式</title>
+
+    <style>
+        /*类选择器*/
+        .xx {
+            color: red;
+            font-size: 40px;
+            font-weight: bold;
+            font-family: "Wawati SC";
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            // 获得第一个按钮添加事件
+            document.getElementById("first").onclick = function () {
+                // 根据one获得段落元素对象
+                var p  = document.getElementById("one");
+                // 设置段落文字颜色
+                p.style.color = "blue";
+                // 设置段落文字大小
+                p.style.fontSize = "30px";
+                p.style.fontFamily = "Wawati SC";
+            }
+
+            // 获得第二个按钮添加事件
+            document.getElementById("second").onclick = function () {
+                // 根据two获得段落元素对象
+                var p  = document.getElementById("two");
+                // 设置className属性
+                p.className = "xx";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <p id="one">这是第一个自然段</p>
+    <p id="two">这是第二个自然段</p>
+    <hr>
+    <input id="first" type="button" value="改变几个样式">
+    <input id="second" type="button" value="改变类样式">
+</body>
+</html>

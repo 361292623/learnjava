@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+
+    <style>
+        div {
+            width: 50%;
+            height: 50%;
+            margin: auto;
+        }
+    </style>
+
+
+    <script>
+        // 定义索引：记录当前显示的图片序号
+        var index = 0;
+        // 网页加载完成调用
+        window.onload = function () {
+            // 开启定时器，每隔2秒切换一张图片
+            window.setInterval(function () {
+                // 索引加一
+                index++;
+                // 判断是否是最后一张
+                if(index > 4) {
+                    // 修改index为0
+                    index = 0;
+                }
+                // 获得图片元素对象并修改src属性值
+                document.getElementById("pic").src = "img/"+index+".jpg";
+            },2000);
+        }
+    </script>
+
+</head>
+<body bgcolor="black">
+
+    <div>
+        <img src="img/0.jpg" width="100%" id="pic">
+    </div>
+
+</body>
+</html>

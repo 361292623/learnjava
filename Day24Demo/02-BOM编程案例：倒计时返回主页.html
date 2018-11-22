@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>倒计时返回主页</title>
+
+    <script>
+
+        // 定时器id
+        var taskId;
+        // 记录时间
+        var second = 5;
+        // 当页面加载完毕之后执行函数
+        window.onload = function () {
+            // 方式1：开启定时器，每隔1秒
+            taskId = window.setInterval(jump2main,1000);
+
+            // 方式2
+            // window.setInterval("jump2main()",1000);
+        }
+
+        // 跳转到主页
+        function jump2main() {
+            // 秒数减一
+            second --;
+            // 修改span内容
+            // innerHTML:设置标签体的内容
+            document.getElementById("time").innerHTML = second;
+            // 判断是否为0
+            if(second == 0) {
+                // 跳转到主页
+                // location.href = "http://ntlias3.boxuegu.com";
+                window.open("http://ntlias3.boxuegu.com");
+
+                // clearInterval: 清除定时器 参数：定时器id
+                // window.clearInterval(taskId);
+
+                window.clearTimeout(taskId);
+            }
+        }
+    </script>
+</head>
+<body>
+    <span id="time">5</span>秒后回到主页
+</body>
+</html>

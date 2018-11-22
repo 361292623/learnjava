@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!--网页编码-->
+    <meta charset="utf-8">
+    <!--告诉浏览器使用最新的内核解析当前页面-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--视口：网页容器的大小-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap模板</title>
+
+    <!-- 引入 Bootstrap 样式文件 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        #myForm {
+            width: 400px;
+            margin: auto;
+            /*border: 1px solid red;*/
+        }
+    </style>
+
+</head>
+    <body>
+
+        <div id="myForm">
+            <h1>添加联系人</h1>
+            <form>
+                <!--姓名-->
+                <div class="form-group">
+                    <label for="username">姓名</label>
+                    <input type="text" class="form-control" id="username" placeholder="请输入姓名">
+                </div>
+
+
+                <!--生日-->
+                <div class="form-group">
+                    <label for="birthday">生日</label>
+                    <input type="date" class="form-control" id="birthday">
+                </div>
+
+                <!--性别-->
+                <div class="form-group">
+                    <label>性别：</label>
+                    <input type="radio" class="form-inline" name="gender" id="man"> <label for="man">男</label>
+                    <input type="radio" class="form-inline" name="gender" id="woman"> <label for="woman">女</label>
+                </div>
+
+                <!--学历-->
+                <div class="form-group">
+                    <label>学历</label>
+                    <select class="form-control">
+                        <option>大专</option>
+                        <option>本科</option>
+                        <option>硕士</option>
+                        <option>博士</option>
+                    </select>
+                </div>
+
+                <div class="form-group" style="text-align: center">
+                    <input class="btn btn-primary" type="submit" value="注册">
+                    <input class="btn btn-default" type="reset" value="取消">
+                    <input class="btn btn-danger"  type="button" value="退出">
+                </div>
+            </form>
+        </div>
+
+        <!-- 可选的：jQuery库 (如果需要使用Bootstrap的插件则需要引入下面两个js库) -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

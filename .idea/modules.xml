@@ -22,6 +22,13 @@
       <module fileurl="file://$PROJECT_DIR$/Day20Demo/Day20Demo.iml" filepath="$PROJECT_DIR$/Day20Demo/Day20Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day21Demo/Day21Demo.iml" filepath="$PROJECT_DIR$/Day21Demo/Day21Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day23Demo/Day23Demo.iml" filepath="$PROJECT_DIR$/Day23Demo/Day23Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day24Demo/Day24Demo.iml" filepath="$PROJECT_DIR$/Day24Demo/Day24Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day25Demo/Day25Demo.iml" filepath="$PROJECT_DIR$/Day25Demo/Day25Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day26Demo/Day26Demo.iml" filepath="$PROJECT_DIR$/Day26Demo/Day26Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day27Demo/Day27Demo.iml" filepath="$PROJECT_DIR$/Day27Demo/Day27Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day28Demo/Day28Demo.iml" filepath="$PROJECT_DIR$/Day28Demo/Day28Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day29Demo/Day29Demo.iml" filepath="$PROJECT_DIR$/Day29Demo/Day29Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day30Demo/Day30Demo.iml" filepath="$PROJECT_DIR$/Day30Demo/Day30Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/learnjava.iml" filepath="$PROJECT_DIR$/learnjava.iml" />
     </modules>
   </component>

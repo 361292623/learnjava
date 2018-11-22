@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="com.itheima.a"
+           elementFormDefault="qualified">
+    <!-- 根元素是bookselft，包含子元素，所以是复杂类型 -->
+    <xs:element name="bookshelf">
+        <xs:complexType>
+            <!-- book出现1~n次 -->
+            <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                <!-- book因为包含子元素和属性，所以也是复杂元素 -->
+                <xs:element name="book">
+                    <!-- 元素要依次出现 -->
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- 其它元素都是简单元素 -->
+                            <xs:element name="title" type="xs:string"/>
+                            <xs:element name="author" type="xs:string"/>
+                            <xs:element name="price" type="xs:positiveInteger"/>
+                        </xs:sequence>
+                        <!-- 属性要写在最后，这里表示属性必须 -->
+                        <xs:attribute name="isbn" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

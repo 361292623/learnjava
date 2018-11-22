@@ -1,0 +1,13 @@
+<!ELEMENT bookshelf (book+)>
+<!ELEMENT book (title,author,price)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST author
+        姓名 CDATA  #REQUIRED
+        年龄 CDATA  #IMPLIED
+        职务 CDATA  #FIXED "程序员"
+        爱好 CDATA  "旅游"
+        gender (男|女) #REQUIRED >
+
+<!--(#PCDATA) Parsed Character Data 可解析的字符数据(普通文本)-->

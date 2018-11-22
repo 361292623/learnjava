@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form{
+            margin: auto;
+            text-align:center ;
+            line-height: 50px;
+        }
+        #img{
+        width: 200px;
+        }
+        body{
+            background-image:url("漫画-女孩-天空-帽子-裙子.jpg") ;
+            background-position: 300px;
+            background-repeat: no-repeat;
+        }
+
+        #imgdiv{
+            margin: auto;
+            width: 120px;
+            height: 100px;
+        }
+    </style>
+    <script type="text/javascript">
+        function cleartext() {
+            document.getElementById("pugai").value = null;
+
+        }
+        function showimg() {
+            document.getElementById("img").src="漫画-女孩-天空-帽子-裙子.jpg";
+
+        }
+        function disimg() {
+            document.getElementById("img").src="Snipaste_2018-11-12_09-22-44.png";
+
+        }
+
+        var a = new Array(2, 3, 5, 6.6, 4);
+        for (ab of a) {
+            document.write(ab + "__");
+        }
+
+    </script>
+</head>
+<body >
+        <form action="js内置对象.html" method="post" onsubmit="alert('啊啊啊!不要提交啊 ')" >
+            <input type="text" value="扑街" id="pugai" onfocus="cleartext()"><br>
+
+            <input type="submit" name="lala" value="这是个按钮吗"><br>
+            <div id="imgdiv">
+            <img  id="img" alt="没有图片的时候就显示这个" src="Snipaste_2018-06-10_20-34-04.png"
+            onmouseover="showimg()" onmouseout="disimg()">
+            </div>
+        </form>
+
+
+</body>
+
+</html>

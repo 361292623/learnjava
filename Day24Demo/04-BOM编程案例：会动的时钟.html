@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>会动的时钟</title>
+
+    <style>
+        h1 {
+            color: green;
+        }
+    </style>
+
+    <script>
+
+        // 当网友加载完毕执行
+        window.onload = function () {
+            // 显示当前系统时间
+            changeTime();
+            // 根据start获得开始按钮
+            var startBtn = document.getElementById("start");
+            // 根据pause获得暂停按钮
+            var pauseBtn = document.getElementById("pause");
+
+            // 定时器id
+            var taskId;
+            // 给开始按钮注册事件
+            startBtn.onclick = function () {
+                // 开启定时器每隔l秒执行函数：changeTime
+                taskId = window.setInterval(changeTime,1000);
+
+                // 禁止开始按钮点击: 设置 disabled 为 true
+                startBtn.disabled = true;
+                // 启用暂停按钮
+                pauseBtn.disabled = false;
+            }
+
+            // 给暂停按钮注册事件
+            pauseBtn.onclick = function () {
+                // 清除定时器
+                window.clearInterval(taskId);
+
+                // 启用开始按钮点击
+                startBtn.disabled = false;
+                // 禁用暂停按钮
+                pauseBtn.disabled = true;
+            }
+        }
+        
+        // 每隔1秒更新时间
+        function changeTime() {
+            // 创建日期对象
+            var dateStr = new Date().toLocaleString();
+            // 根据time获得标题元素对象
+            document.getElementById("time").innerHTML = dateStr;
+        }
+        
+    </script>
+</head>
+<body>
+    <h1 id="time"></h1>
+    <!--disabled：设置该元素不可用：不能和用户交互-->
+    <button id="start" type="button">开始</button>
+    <button id="pause" type="button" disabled>暂停</button>
+
+</body>
+</html>

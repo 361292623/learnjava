@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>innerHTML和innerText属性的区别</title>
+    <style type="text/css">
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        th {
+            background-color: lightgrey;
+        }
+
+        tr:hover {
+            background-color: yellowgreen;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+     // 监听添加按钮点击
+     function addBtnClick() {
+         // 获得文本输入框元素对象
+         var noElement = document.getElementById("no");
+         var nameElement = document.getElementById("name");
+
+         // 获得学号
+         var number = noElement.value;
+         // 判断学号是否为空
+         // String类中trim方法：去除左右两边的空格
+         // String price = " 100 "; price.trim()==> "100" ==> Integer.parseInt(price.trim());
+         if (number.trim().length == 0){
+             // 如果为空：表示没有输入数据，则提示用户先输入学号
+             alert("请输入学号");
+             return;
+         }
+         // 获得姓名
+         var name = nameElement.value;
+         // 判断姓名是否为空，trim()移除空白符
+         if (name.trim().length == 0){
+             // 如果为空：表示没有输入数据，则提示用户先输入姓名
+             alert("请输入姓名");
+             return;
+         }
+
+         // 创建tr元素对象
+         // 等价于：<tr></tr>
+         var tr = document.createElement("tr");
+         // 设置tr标签体内容
+      /*   tr.innerHTML = "<td><input type='checkbox' name='item'></td>" +
+             "<td>"+number+"</td>" +
+             "<td>"+name+"</td>" +
+             "<td><input type='button' value='删除' onclick='deleteRow(this)'></td>";*/
+
+         tr.innerHTML = "<td><input type='checkbox' name='item'></td>" +
+             "<td>"+number+"</td>" +
+             "<td>"+name+"</td>" +
+             "<td><input type='button' value='删除' onclick='deleteRow(this)'></td>";
+
+
+        /* innerText和innerHTML属性区别
+            相同点：都是用来设置标签体内容
+            不同点：
+                 innerHTML设置标签体内容：则内容中包括标签元素则浏览器会解析内容中的标签元素。
+                 innerText设置标签体内容：则内容中包含标签元素时浏览器不会解析标签元素，而是当成纯文本显示出来。
+
+            如何选择：
+                如果内容中包含标签，则使用innerHTML属性设置，否则使用哪个一个都可以。
+         */
+
+         // 注意：tr的直接父元素不是table标签，是tbody元素
+         // 先获得tbody元素对象
+         var tbody = document.getElementsByTagName("tbody")[0];
+
+         // 将tr元素添加tbody上
+         tbody.appendChild(tr);
+
+         // 清空文本输入框的内容
+         noElement.value = null;
+         nameElement.value = null;
+
+     }
+    </script>
+</head>
+<body>
+<div>
+    <table border="1" cellspacing="0" cellpadding="3">
+        <!--tr的父元素是tbody-->
+        <tr>
+            <th>
+                <input type="checkbox" id="all">
+            </th>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="item">
+            </td>
+            <td>00001</td>
+            <td>潘金莲</td>
+            <td>
+                <input type="button" value="删除" onclick='deleteRow(this)'>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="item">
+            </td>
+            <td>00002</td>
+            <td>鲁智深</td>
+            <td>
+                <input type="button" value="删除" onclick='deleteRow(this)'>
+            </td>
+        </tr>
+    </table>
+    <br />
+    学号：<input type="text" id="no" value="" />
+    姓名：<input type="text" id="name" value="" />
+    <input type="button" id="addBtn" value="添加" onclick="addBtnClick();"/>
+</div>
+</body>
+</html>

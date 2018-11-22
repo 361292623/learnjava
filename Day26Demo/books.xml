@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<x:bookshelf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:x="com.itheima.a"
+           xsi:schemaLocation="com.itheima.a books.xsd">
+    <x:book isbn="100">
+        <x:title>西游记</x:title>
+        <x:author>吴承恩</x:author>
+        <x:price>10</x:price>
+    </x:book>
+    <x:book isbn="100">
+        <x:title>西游记</x:title>
+        <x:author>吴承恩</x:author>
+        <x:price>10</x:price>
+    </x:book>
+</x:bookshelf>

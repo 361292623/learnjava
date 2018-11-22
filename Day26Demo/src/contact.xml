@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contactList>
+    <contact id="SB100">
+        <name>潘金莲</name>
+        <gender>女</gender>
+        <phone>10010</phone>
+        <qq>10086</qq>
+        <email>10086@qq.com</email>
+    </contact>
+    <contact id="SB101">
+        <name>武大郎</name>
+        <gender>男</gender>
+        <phone>10000</phone>
+        <qq>1864234</qq>
+        <email>1864234@qq.com</email>
+    </contact>
+    <contact id="SB102">
+        <name>陶震</name>
+        <gender>女</gender>
+        <phone>9527</phone>
+        <qq>440000</qq>
+        <email>440000@qq.com</email>
+    </contact>
+</contactList>

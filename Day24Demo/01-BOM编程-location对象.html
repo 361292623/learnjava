@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>location对象</title>
+
+
+</head>
+<body>
+    <input type="button" value="跳转到百度" onclick="jump2baidu();">
+    <input type="button" value="刷新当前页面" onclick="location.reload();"> <br>
+
+    <script>
+
+        // 刷新当前页面
+        function reload() {
+            location.reload();
+        }
+
+        // 跳转到百度
+        function jump2baidu() {
+
+            // 获得当前页面网址
+            var url = location.href;
+            alert(url);
+
+            // 修改地址栏地址
+            // location.href = "http://ntlias3.boxuegu.com";
+
+            // 省略格式
+            // location = "http://ntlias3.boxuegu.com";
+
+
+            // 打开一个新页面
+            // open方法：参数1：新页面网址
+            // 参数2：指定在哪个窗口打开  _self 当前窗口 _blank 默认值 在空白页面打开
+            // window.open("http://ntlias3.boxuegu.com","_self");
+        }
+
+        // 如果是window对象的属性和方法，则在访问属性或调用方法时可以省略window
+        document.write("主机名和端口号：" + window.location.host+"<br>");
+        document.write("主机名：" + window.location.hostname+"<br>");
+        document.write("端口号：" + window.location.port+"<br>");
+
+        document.write("主机名和端口号：" + location.host+"<br>");
+        document.write("主机名：" + location.hostname+"<br>");
+        document.write("端口号：" + location.port+"<br>");
+        document.write(new Date().toLocaleString()+"<br>");
+
+    </script>
+</body>
+</html>

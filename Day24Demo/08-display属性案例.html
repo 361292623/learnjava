@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>display属性案例</title>
+
+    <style>
+        a {
+            color: red;
+            font-size: 40px;
+            text-decoration: none;
+        }
+
+        #info {
+            width: 320px;
+            height: 40px;
+            border: 1px dashed black;
+            background-color: yellow;
+            border-radius: 8px;
+            font-size: 28px;
+            text-align: center;
+            /*display: 设置元素隐藏或显示;
+                none：隐藏元素
+                block: 显示元素，设置元素为块级元素
+                inline：显示元素，设置元素为行内元素
+            */
+            display: none;
+        }
+    </style>
+
+    <script>
+        // 显示提示信息
+        function showInfo() {
+            // 获得div元素对象
+            var div = document.getElementById("info");
+            // 设置div显示出来
+            div.style.display = "block";
+        }
+
+        function dismiss() {
+            document.getElementById("info").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+
+    <a href="#" onmouseover="showInfo();" onmouseout="dismiss();">传智播客</a>
+    <div id="info">点我可以看精彩内容哦</div>
+
+</body>
+</html>

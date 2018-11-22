@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!--网页编码-->
+    <meta charset="utf-8">
+    <!--告诉浏览器使用最新的内核解析当前页面-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--视口：网页容器的大小-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>两种容器</title>
+
+    <!-- 引入 Bootstrap 样式文件 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        div {
+            height: 200px;
+            border: 1px solid red;
+        }
+    </style>
+
+</head>
+    <body>
+
+        <!--类似table标签-->
+        <div class="container">
+            不同的分别率下有固定的宽度
+        </div>
+        <!--类似table标签-->
+        <div class="container-fluid">
+            不同的分别率下宽度都是100%
+        </div>
+
+        <!-- 可选的：jQuery库 (如果需要使用Bootstrap的插件则需要引入下面两个js库) -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+多态：指一个引用（类型）在不同的情况下的多种状态。也可以理解为，多态是指通过指向父类的指针，来调用在不同子类中实现的方法。。
+-----------------------------
+instanceof关键字
+	作用:判断一个变量是否是某个类型
+	使用格式:boolean b = 变量名 instanceof 类名
+	注意:instanceof的类型必须是有继承关系,否则代码报错
+	判断这个对象是否是这个特定类或者是它的子类的一个实例
+-----------------------------
+import java.util.Date;
+*    public long getTime() : 获取时间的毫秒值。
+-----------------------------
+ * SimpleDateFormat的常用功能：
+ *   （1）可以把Date日期类或者时间毫秒值进行时间格式化。
+ *         -- String format(Date date)
+ *         -- String format(Object obj)
+     SimpleDateFormat sb1 = new SimpleDateFormat("yyyy年MM月dd日");
+	sb1.format(Date date);
+
+ 可以把字符串的时间解析成一个Date日期对象。
+-----------------------------
+ 日期格式化类。
+ *      SimpleDateFormat sdf =
+                new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        // 开始解析 ： d 此时的时间就是 2018-10-08 10:10:10
+        Date d = sdf.parse(timeStr);
+ -----------------------------
+         String s = "2016-12-18";
+        SimpleDateFormat sb = new SimpleDateFormat("yyyy-MM-dd");
+        Date date =sb.parse(s);//以初始化的日期格式识别字符串中的时间
+        sb.applyPattern("yyyy年MM月dd日");//改变日期格式
+        System.out.println(sb.format(date));
+-----------------------------
+Calendar:
+*    代表的日历类。
+*    日历从理论上来看比Date日期类更加的强大。
+*
+-----------------------------
+JDK1.8后接口可以有默认方法并且有方法体
+用default修饰方法
+实现多接口时，如果有相同的默认方法，则无法同时实现
+
+-----------------------------
+创建线程方式三
+定义callable实现类
+FutureTask<T> x= new FutureTask<>（callable实现类）
+new Thread(x);
+x.get可得到callable实现类返回值
+
+callable实现类应创建多个对象，以免线程调用时参数值冲突
+-----------------------------
+数组排序
+   Arrays.sort()
+ -----------------------------
+ 使用IO流复制文件
+ 1、 定义输入流 new FileInputStream("文件路径")
+ 2、定义输出流 new FileOutputStream("文件路径")
+ 3、定义用于缓存的字节数组 byte[]
+ 4、循环存入read(byte[]),同时循环取出write(byte[])
+-----------------------------
+  有桶（用于缓存的字节数组）FileInputStream的性能 >  没桶的		高很多性能
+  使用缓冲流的 >  没有使用缓冲流的  高很多性能			BufferedInputStream		BufferedOutputStream
+-----------------------------
+    IO流文件路径入参
+    FileInputStream(文件路径)
+    FileOutputStream(文件路径)
+    FileReader(文件路径)
+    FileWriter(文件路径)
+
+-----------------------------
+    网络通信创建过程
+    TCP
+    客户端 OutputStream os= new Socket(地址,端口号).getOutputStream  ==> 服务端 ImputStream is = new ServerSocket (端口号).getInputStream
+-----------------------------
+    void accept(String s) {
+                System.out.println(s);
+            }
+		  s->System.out.println(s);
+		  System.out::println;
+
+ -----------------------------
+ JDBC连接
+ 1、获取 Connectiond连接对象			Connection conn = JDBCUtil.getConnection();
+ 2、PreparedStatment 预执行sql语句		PreparedStatement ps = conn.prepareStatement(sql);
+ 3、给占位符 ? 赋值 							ps.setString(1, "猪八戒");
+ 4、close资源
+-- -----------------------------
+ request.getParameter("键名")
+ 可根据键名获取请求中form表单中对应的键值
+<a href="down?filename=file.txt">文本文件</a><br/>
+down为servlet名，？号后跟随的是参数，以键值对的形式
+通过getParameter方法也可以获取到键值

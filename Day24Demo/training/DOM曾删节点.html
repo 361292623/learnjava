@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table
+        {
+            margin: 10px;
+            width: 500px;
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        th {
+            background-color: lightgrey;
+            border:1px solid #9aa698;
+            height: 30px;
+        }
+
+         tr:hover{
+            background-color:#f3f3f3 ;
+         }
+         td{
+             text-align: center;
+             border:1px solid #9aa698;
+             height: 40px;
+        }
+        div{
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tbody>
+    <tr>
+        <th><input type="checkbox" id = "ch1"></th>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id = "ch2"></td>
+        <td>01</td>
+        <td>阿达</td>
+        <td><button onclick="deleteRow(this)">操作</button></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id = "ch3"></td>
+        <td>02</td>
+        <td>鲁斯么</td>
+        <td><button onclick="deleteRow(this)">操作</button></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" id = "ch4"></td>
+        <td>04</td>
+        <td>会尽快发</td>
+        <td><button onclick="deleteRow(this)">操作</button></td>
+    </tr>
+
+    </tbody>
+</table>
+<div>
+    <span >学号：<input type="text" id="sno"></span>
+    <span >姓名：<input type="text" id="name"></span>
+    <button onclick="addstu()">添加</button>
+</div>
+</body>
+<script>
+    function addstu() {
+        var sno = document.getElementById("sno");
+        var name = document.getElementById("name");
+        var snoV = sno.value;
+        var nameV = name.value;
+        var tbody =document.getElementsByTagName("tbody")[0];
+        var tr = document.createElement("tr");
+        tr.innerHTML = "    <tr>\n" +
+            "        <td><input type=\"checkbox\" id = "+snoV+"></td>\n" +
+            "        <td>"+snoV+"</td>\n" +
+            "        <td>"+nameV+"</td>\n" +
+            "        <td><button onclick=\"deleteRow(this)\">操作</button></td>\n" +
+            "    </tr>"
+        tbody.appendChild(tr);
+    }
+    function deleteRow(btn) {
+        var td = btn.parentNode;
+        var tr =td.parentNode;
+
+        document.getElementsByTagName("tbody")[0].removeChild(tr);
+    }
+</script>
+</html>
