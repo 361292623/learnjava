@@ -3,6 +3,8 @@ package com.itheima.url编码;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author pkxing
@@ -17,7 +19,6 @@ public class Demo01 {
         // 对字符串进行URL编码
         String encode = URLEncoder.encode(str, "utf-8");
         System.out.println(encode);
-
         // 对编码的字符串解码
         String decode = URLDecoder.decode(encode, "utf-8");
         System.out.println(decode);

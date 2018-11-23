@@ -57,19 +57,19 @@ callable实现类应创建多个对象，以免线程调用时参数值冲突
  3、定义用于缓存的字节数组 byte[]
  4、循环存入read(byte[]),同时循环取出write(byte[])
 -----------------------------
-  有桶（用于缓存的字节数组）FileInputStream的性能 >  没桶的		高很多性能
-  使用缓冲流的 >  没有使用缓冲流的  高很多性能			BufferedInputStream		BufferedOutputStream
+有桶（用于缓存的字节数组）FileInputStream的性能 >  没桶的		高很多性能
+使用缓冲流的 >  没有使用缓冲流的  高很多性能			BufferedInputStream		BufferedOutputStream
 -----------------------------
-    IO流文件路径入参
-    FileInputStream(文件路径)
-    FileOutputStream(文件路径)
-    FileReader(文件路径)
-    FileWriter(文件路径)
+IO流文件路径入参
+FileInputStream(文件路径)
+FileOutputStream(文件路径)
+FileReader(文件路径)
+FileWriter(文件路径)
 
 -----------------------------
-    网络通信创建过程
-    TCP
-    客户端 OutputStream os= new Socket(地址,端口号).getOutputStream  ==> 服务端 ImputStream is = new ServerSocket (端口号).getInputStream
+网络通信创建过程
+TCP
+客户端 OutputStream os= new Socket(地址,端口号).getOutputStream  ==> 服务端 ImputStream is = new ServerSocket (端口号).getInputStream
 -----------------------------
     void accept(String s) {
                 System.out.println(s);
@@ -84,8 +84,8 @@ callable实现类应创建多个对象，以免线程调用时参数值冲突
  3、给占位符 ? 赋值 							ps.setString(1, "猪八戒");
  4、close资源
 -- -----------------------------
- request.getParameter("键名")
- 可根据键名获取请求中form表单中对应的键值
+request.getParameter("键名")
+可根据键名获取请求中form表单中对应的键值
 <a href="down?filename=file.txt">文本文件</a><br/>
 down为servlet名，？号后跟随的是参数，以键值对的形式
 通过getParameter方法也可以获取到键值
