@@ -19,7 +19,7 @@ import java.util.Date;
  可以把字符串的时间解析成一个Date日期对象。
 -----------------------------
  日期格式化类。
- *      SimpleDateFormat sdf =
+  SimpleDateFormat sdf =
                 new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         // 开始解析 ： d 此时的时间就是 2018-10-08 10:10:10
         Date d = sdf.parse(timeStr);
@@ -89,3 +89,39 @@ request.getParameter("键名")
 <a href="down?filename=file.txt">文本文件</a><br/>
 down为servlet名，？号后跟随的是参数，以键值对的形式
 通过getParameter方法也可以获取到键值
+
+-- -----------------------------
+jsp
+组成部分**功能****语法**
+JSP代码片段      **用来编写Java代码，翻译在JspService方法中              <% Java代码  %>
+JSP脚本表达式    **输出变量或表达式的值，翻译在JspService方法中，输出语句   <%=变量名或表达式%>
+JSP声明         **用来定义成员变量和成员方法，类中方法外                  <%!  定义变量或方法  %>
+
+-- -----------------------------
+Session在服务器上默认的销毁时间是30分钟，如30分钟无活动则销毁
+void setMaxInactiveInterval(int 秒)设置session最大的非活动间隔时间，单位：秒
+
+Cookie默认情况下的过期时间：当会话结束(浏览器关闭之后)就过期
+void setMaxAge(int expiry)设置cookies过期时间：单位秒
+
+-- -----------------------------
+innerText设置标签体内容：则内容中包含标签元素时浏览器不会解析标签元素，而是当成纯文本显示出来。
+innerHTML设置标签体内容：则内容中包括标签元素则浏览器会解析内容中的标签元素。
+
+-- -----------------------------
+jquery
+<div id="div2"><span><div><h2>这是一个div2里的span</h2></div></span></div>
+alert($("#div2").text())        //输出最里层的文本内容
+alert('html方法'+$("#div2").html())//输出指定标签内的所有内容
+
+$("#div2").text("<h2>这是一个div2里的span</h2>") //和innerText效果相同
+$("#div2").html("<h2>这是一个div2里的span</h2>") //和innerHTML效果相同
+-- -----------------------------
+jquery
+过滤选择器
+[标签]:属性名:属性名
+-- -----------------------------
+getParameter(String)获取单个的表单name属性对应的值，
+getAttribute(String name)获取的是域里面对应的name的值，
+获取项目工程名使用getContextPath()，
+getRequestDispatcher(String path).forward(ServletRequest request,ServletResponse response)可以实现转发
